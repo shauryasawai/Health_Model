@@ -1,9 +1,9 @@
-# 🩺 Healthigrity — Health Screening Score
+# 🩺 Healthigrity (Health Screening Score)
 
 Healthigrity looks at a person's medical test results and estimates how likely
-they are to have each of seven common conditions — **heart disease,
+they are to have each of seven common conditions **heart disease,
 cardiovascular risk, diabetes, kidney disease, liver disease, thyroid disorder,
-and anaemia** — then combines those into one
+and anaemia** - then combines those into one
 easy-to-read **overall health score (0–100)**.
 
 > ⚠️ **This is a screening estimate, not a diagnosis.** It is meant to point
