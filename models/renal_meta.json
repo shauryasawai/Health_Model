@@ -1,0 +1,119 @@
+{
+  "key": "renal",
+  "display": "Kidney",
+  "feature_names": [
+    "age",
+    "bp",
+    "sg",
+    "al",
+    "su",
+    "rbc",
+    "pc",
+    "pcc",
+    "ba",
+    "bgr",
+    "bu",
+    "sc",
+    "sod",
+    "pot",
+    "hemo",
+    "pcv",
+    "wc",
+    "rc",
+    "htn",
+    "dm",
+    "cad",
+    "appet",
+    "pe",
+    "ane"
+  ],
+  "required_features": [
+    "sc",
+    "hemo",
+    "al"
+  ],
+  "min_coverage": 0.6,
+  "base_weight": 0.15,
+  "decision_threshold": 0.905,
+  "numeric_ranges": {
+    "age": [
+      5.0,
+      80.10000000000002
+    ],
+    "bp": [
+      50.0,
+      110.0
+    ],
+    "sg": [
+      1.005,
+      1.025
+    ],
+    "al": [
+      0.0,
+      4.0
+    ],
+    "su": [
+      0.0,
+      4.0
+    ],
+    "bgr": [
+      70.0,
+      434.89999999999975
+    ],
+    "bu": [
+      15.0,
+      236.19999999999993
+    ],
+    "sc": [
+      0.5,
+      19.16200000000004
+    ],
+    "sod": [
+      113.0,
+      150.0
+    ],
+    "pot": [
+      2.811,
+      6.588999999999999
+    ],
+    "hemo": [
+      5.694,
+      17.653
+    ],
+    "pcv": [
+      16.28,
+      53.71999999999997
+    ],
+    "wc": [
+      3800.0,
+      18914.0
+    ],
+    "rc": [
+      2.368,
+      6.5
+    ]
+  },
+  "metrics": {
+    "selected_model": "Logistic",
+    "cv_macro_f1_by_model": {
+      "Logistic": 0.9866,
+      "RandomForest": 0.9865,
+      "XGBoost": 0.9733
+    },
+    "decision_threshold": 0.905,
+    "target_recall": 0.85,
+    "test_macro_f1": 0.873,
+    "test_recall_disease": 0.8,
+    "test_precision_disease": 1.0,
+    "test_roc_auc": 1.0,
+    "test_pr_auc": 1.0,
+    "test_brier": 0.0161,
+    "n_train": 320,
+    "n_test": 80,
+    "class_balance": {
+      "1": 250,
+      "0": 150
+    },
+    "calibration": "sigmoid"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "key": "diabetes",
+  "display": "Diabetes",
+  "feature_names": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "required_features": [
+    "Glucose",
+    "BMI",
+    "Age"
+  ],
+  "min_coverage": 0.6,
+  "base_weight": 0.16,
+  "decision_threshold": 0.244,
+  "numeric_ranges": {
+    "Pregnancies": [
+      0.0,
+      13.0
+    ],
+    "Glucose": [
+      67.62,
+      196.0
+    ],
+    "BloodPressure": [
+      44.0,
+      106.0
+    ],
+    "SkinThickness": [
+      10.0,
+      53.200000000000045
+    ],
+    "Insulin": [
+      18.0,
+      580.4699999999998
+    ],
+    "BMI": [
+      19.5,
+      51.011999999999865
+    ],
+    "DiabetesPedigreeFunction": [
+      0.09468,
+      1.6983300000000001
+    ],
+    "Age": [
+      21.0,
+      67.0
+    ]
+  },
+  "metrics": {
+    "selected_model": "Logistic",
+    "cv_macro_f1_by_model": {
+      "Logistic": 0.7542,
+      "RandomForest": 0.7302,
+      "XGBoost": 0.7245
+    },
+    "decision_threshold": 0.244,
+    "target_recall": 0.85,
+    "test_macro_f1": 0.7181,
+    "test_recall_disease": 0.8889,
+    "test_precision_disease": 0.5647,
+    "test_roc_auc": 0.8176,
+    "test_pr_auc": 0.6848,
+    "test_brier": 0.17,
+    "n_train": 614,
+    "n_test": 154,
+    "class_balance": {
+      "0": 500,
+      "1": 268
+    },
+    "calibration": "sigmoid"
+  }
+}

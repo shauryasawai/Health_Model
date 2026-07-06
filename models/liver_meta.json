@@ -1,0 +1,85 @@
+{
+  "key": "liver",
+  "display": "Liver",
+  "feature_names": [
+    "Age",
+    "Gender",
+    "Total_Bilirubin",
+    "Direct_Bilirubin",
+    "Alkaline_Phosphotase",
+    "Alamine_Aminotransferase",
+    "Aspartate_Aminotransferase",
+    "Total_Protiens",
+    "Albumin",
+    "Albumin_and_Globulin_Ratio"
+  ],
+  "required_features": [
+    "Total_Bilirubin",
+    "Alamine_Aminotransferase",
+    "Albumin"
+  ],
+  "min_coverage": 0.6,
+  "base_weight": 0.12,
+  "decision_threshold": 0.614,
+  "numeric_ranges": {
+    "Age": [
+      9.38,
+      75.0
+    ],
+    "Total_Bilirubin": [
+      0.5690000000000001,
+      28.567999999999845
+    ],
+    "Direct_Bilirubin": [
+      0.1,
+      13.07899999999995
+    ],
+    "Alkaline_Phosphotase": [
+      97.69,
+      1559.2999999999984
+    ],
+    "Alamine_Aminotransferase": [
+      11.690000000000001,
+      1042.9999999999836
+    ],
+    "Aspartate_Aminotransferase": [
+      12.0,
+      987.8999999999951
+    ],
+    "Total_Protiens": [
+      3.669,
+      8.630999999999995
+    ],
+    "Albumin": [
+      1.469,
+      4.9
+    ],
+    "Albumin_and_Globulin_Ratio": [
+      0.383,
+      1.8175000000000012
+    ]
+  },
+  "metrics": {
+    "selected_model": "Logistic",
+    "cv_macro_f1_by_model": {
+      "Logistic": 0.6289,
+      "RandomForest": 0.5807,
+      "XGBoost": 0.608
+    },
+    "decision_threshold": 0.614,
+    "target_recall": 0.85,
+    "test_macro_f1": 0.7015,
+    "test_recall_disease": 0.8272,
+    "test_precision_disease": 0.8272,
+    "test_roc_auc": 0.8062,
+    "test_pr_auc": 0.9265,
+    "test_brier": 0.16,
+    "n_train": 456,
+    "n_test": 114,
+    "class_balance": {
+      "1": 406,
+      "0": 164
+    },
+    "calibration": "sigmoid"
+  }
+}

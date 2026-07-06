@@ -1,0 +1,87 @@
+{
+  "key": "thyroid",
+  "display": "Thyroid",
+  "feature_names": [
+    "age",
+    "sex",
+    "on_thyroxine",
+    "query_on_thyroxine",
+    "on_antithyroid_meds",
+    "sick",
+    "pregnant",
+    "thyroid_surgery",
+    "I131_treatment",
+    "query_hypothyroid",
+    "query_hyperthyroid",
+    "lithium",
+    "goitre",
+    "tumor",
+    "hypopituitary",
+    "psych",
+    "TSH_measured",
+    "TSH",
+    "T3_measured",
+    "T3",
+    "TT4_measured",
+    "TT4",
+    "T4U_measured",
+    "T4U",
+    "FTI_measured",
+    "FTI"
+  ],
+  "required_features": [
+    "TSH"
+  ],
+  "min_coverage": 0.6,
+  "base_weight": 0.08,
+  "decision_threshold": 0.721,
+  "numeric_ranges": {
+    "age": [
+      14.0,
+      87.0
+    ],
+    "TSH": [
+      0.01,
+      94.83999999999651
+    ],
+    "T3": [
+      0.3,
+      5.0
+    ],
+    "TT4": [
+      16.0,
+      225.70999999999913
+    ],
+    "T4U": [
+      0.55,
+      1.693799999999992
+    ],
+    "FTI": [
+      16.689999999999998,
+      245.61999999999898
+    ]
+  },
+  "metrics": {
+    "selected_model": "XGBoost",
+    "cv_macro_f1_by_model": {
+      "Logistic": 0.6987,
+      "RandomForest": 0.9288,
+      "XGBoost": 0.9298
+    },
+    "decision_threshold": 0.721,
+    "target_recall": 0.85,
+    "test_macro_f1": 0.9153,
+    "test_recall_disease": 0.8396,
+    "test_precision_disease": 0.9097,
+    "test_roc_auc": 0.9861,
+    "test_pr_auc": 0.9549,
+    "test_brier": 0.0392,
+    "n_train": 7337,
+    "n_test": 1835,
+    "class_balance": {
+      "0": 6771,
+      "1": 2401
+    },
+    "calibration": "isotonic"
+  }
+}

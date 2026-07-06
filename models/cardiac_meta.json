@@ -1,0 +1,77 @@
+{
+  "key": "cardiac",
+  "display": "Heart",
+  "feature_names": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalch",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "required_features": [
+    "age",
+    "trestbps",
+    "chol",
+    "thalch"
+  ],
+  "min_coverage": 0.6,
+  "base_weight": 0.22,
+  "decision_threshold": 0.497,
+  "numeric_ranges": {
+    "age": [
+      32.0,
+      74.0
+    ],
+    "trestbps": [
+      95.0,
+      180.0
+    ],
+    "chol": [
+      133.12,
+      451.4400000000013
+    ],
+    "thalch": [
+      75.48,
+      186.38
+    ],
+    "oldpeak": [
+      -0.5899999999999999,
+      4.0
+    ],
+    "ca": [
+      0.0,
+      3.0
+    ]
+  },
+  "metrics": {
+    "selected_model": "RandomForest",
+    "cv_macro_f1_by_model": {
+      "Logistic": 0.8019,
+      "RandomForest": 0.8181,
+      "XGBoost": 0.7986
+    },
+    "decision_threshold": 0.497,
+    "target_recall": 0.85,
+    "test_macro_f1": 0.8346,
+    "test_recall_disease": 0.8627,
+    "test_precision_disease": 0.8462,
+    "test_roc_auc": 0.9179,
+    "test_pr_auc": 0.9277,
+    "test_brier": 0.1156,
+    "n_train": 734,
+    "n_test": 184,
+    "class_balance": {
+      "1": 508,
+      "0": 410
+    },
+    "calibration": "sigmoid"
+  }
+}

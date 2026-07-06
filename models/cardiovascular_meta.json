@@ -1,0 +1,95 @@
+{
+  "key": "cardiovascular",
+  "display": "Cardiovascular",
+  "feature_names": [
+    "age",
+    "gender",
+    "height",
+    "weight",
+    "ap_hi",
+    "ap_lo",
+    "cholesterol",
+    "gluc",
+    "smoke",
+    "alco",
+    "active"
+  ],
+  "required_features": [
+    "ap_hi",
+    "ap_lo",
+    "age",
+    "cholesterol"
+  ],
+  "min_coverage": 0.6,
+  "base_weight": 0.2,
+  "decision_threshold": 0.318,
+  "numeric_ranges": {
+    "age": [
+      39.6,
+      64.3
+    ],
+    "gender": [
+      1.0,
+      2.0
+    ],
+    "height": [
+      146.0,
+      184.0
+    ],
+    "weight": [
+      48.0,
+      119.0
+    ],
+    "ap_hi": [
+      90.0,
+      180.0
+    ],
+    "ap_lo": [
+      60.0,
+      1000.0
+    ],
+    "cholesterol": [
+      1.0,
+      3.0
+    ],
+    "gluc": [
+      1.0,
+      3.0
+    ],
+    "smoke": [
+      0.0,
+      1.0
+    ],
+    "alco": [
+      0.0,
+      1.0
+    ],
+    "active": [
+      0.0,
+      1.0
+    ]
+  },
+  "metrics": {
+    "selected_model": "XGBoost",
+    "cv_macro_f1_by_model": {
+      "Logistic": 0.7141,
+      "RandomForest": 0.7069,
+      "XGBoost": 0.7259
+    },
+    "decision_threshold": 0.318,
+    "target_recall": 0.85,
+    "test_macro_f1": 0.6573,
+    "test_recall_disease": 0.87,
+    "test_precision_disease": 0.628,
+    "test_roc_auc": 0.7936,
+    "test_pr_auc": 0.7711,
+    "test_brier": 0.1819,
+    "n_train": 8000,
+    "n_test": 2000,
+    "class_balance": {
+      "1": 5075,
+      "0": 4925
+    },
+    "calibration": "isotonic"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "key": "anaemia",
+  "display": "Anaemia",
+  "feature_names": [
+    "Age",
+    "Sex",
+    "RBC",
+    "MCV",
+    "MCH",
+    "MCHC",
+    "RDW",
+    "TLC",
+    "PLT/mm3"
+  ],
+  "required_features": [
+    "RBC",
+    "MCV",
+    "RDW",
+    "Sex"
+  ],
+  "min_coverage": 0.6,
+  "base_weight": 0.07,
+  "decision_threshold": 0.699,
+  "numeric_ranges": {
+    "Age": [
+      13.0,
+      81.89999999999998
+    ],
+    "RBC": [
+      1.942,
+      6.05
+    ],
+    "MCV": [
+      61.2,
+      118.06499999999998
+    ],
+    "MCH": [
+      17.7,
+      39.54999999999999
+    ],
+    "MCHC": [
+      26.564999999999998,
+      39.87
+    ],
+    "RDW": [
+      11.965,
+      21.839999999999986
+    ],
+    "TLC": [
+      2.754,
+      27.43599999999999
+    ],
+    "PLT/mm3": [
+      33.65,
+      532.9
+    ]
+  },
+  "metrics": {
+    "selected_model": "Logistic",
+    "cv_macro_f1_by_model": {
+      "Logistic": 0.9326,
+      "RandomForest": 0.8589,
+      "XGBoost": 0.8888
+    },
+    "decision_threshold": 0.699,
+    "target_recall": 0.85,
+    "test_macro_f1": 0.9167,
+    "test_recall_disease": 0.8462,
+    "test_precision_disease": 1.0,
+    "test_roc_auc": 0.9953,
+    "test_pr_auc": 0.9959,
+    "test_brier": 0.0469,
+    "n_train": 284,
+    "n_test": 72,
+    "class_balance": {
+      "1": 194,
+      "0": 162
+    },
+    "calibration": "sigmoid"
+  }
+}
